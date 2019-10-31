@@ -25,6 +25,7 @@ helm history foo
 helm rollback foo 1
 Create a blank chart
 helm create foo
+tree foo
 helm lint foo
 helm package foo
 helm dependency update
