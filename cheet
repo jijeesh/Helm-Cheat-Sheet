@@ -1,0 +1,31 @@
+
+helm init --client-only
+kubectl create -f rbac-config.yaml
+helm init --service-account tiller
+helm init --upgrade
+helm version
+helm repo list
+helm repo update
+helm search
+helm search foo
+helm ls
+helm ls --deleted
+helm ls --all
+helm inspect values stable/mysql
+helm install --name foo stable/mysql
+helm install --name path/to/foo
+helm install --name foo bar-1.2.3.tgz
+helm install --name foo https://example.com/charts/bar-1.2.3.tgz
+helm install --name foo --values config.yaml --timeout 300 --wait stable/mysql
+helm status foo
+helm delete --purge foo
+helm get values foo
+helm upgrade --values config.yaml foo stable/mysql
+helm history foo
+helm rollback foo 1
+Create a blank chart
+helm create foo
+helm lint foo
+helm package foo
+helm dependency update
+az acr helm repo add --name foo
